@@ -1,0 +1,22 @@
+name: CI with Email Step
+
+on: [push]  # Runs on every git push
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Step by 21f2000471@ds.study.iitm.ac.in  # Your email
+        run: |
+          echo "This step contains my email address"
+          echo "Existing files:"
+          ls
+
+      - name: Verify Python API
+        run: |
+          python --version
+          echo "API file exists:"
+          ls api.py
